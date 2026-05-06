@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HQ Website - Khuyến Mãi</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container header-inner">
+            <a href="#" class="logo">
+                <img src="assets/images/logo-header.png" alt="HQ Logo" height="56">
+            </a>
+            
+            <div class="search-container">
+                <div class="search-bar">
+                    <input type="text" placeholder="Hinted search text">
+                    <button><i class="ph ph-magnifying-glass"></i></button>
+                </div>
+            </div>
+
+            <div class="header-actions">
+                <a href="#" class="btn-appointment">Đặt Lịch Hẹn</a>
+                <a href="#" class="action-item">
+                    <img src="assets/images/icon-user-header.png" alt="Tài khoản">
+                </a>
+                <a href="#" class="action-item cart">
+                    <img src="assets/images/icon-cart-header.png" alt="Giỏ hàng">
+                </a>
+                <a href="#" class="action-item">
+                    <img src="assets/images/icon-grid.png" alt="Danh mục">
+                </a>
+            </div>
+        </div>
+
+        <!-- Navigation -->
+        <nav class="main-nav">
+            <div class="container nav-inner">
+                <ul class="nav-list nav-left">
+                    <li><a href="#">Gạch Ốp Lát</a></li>
+                    <li><a href="#">Thiết Bị Vệ Sinh</a></li>
+                    <li><a href="#">Thiết Bị Bếp</a></li>
+                    <li><a href="#">Phụ kiện</a></li>
+                    <li><a href="#">Thương Hiệu</a></li>
+                    <li><a href="#">Khám Phá</a></li>
+                </ul>
+                <ul class="nav-list nav-right">
+                    <li><a href="#">Về Hùng Quyền</a></li>
+                    <li><a href="#">Tin tức</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Banner -->
+    <section class="banner">
+        <div class="container">
+            <img src="assets/images/banner.png" alt="Khuyến mãi TOTO" class="banner-img">
+        </div>
+    </section>
+
+    <!-- Page Title -->
+    <div class="container">
+        <h1 class="page-title text-center" style="font-size: 24px; font-weight: 800; text-align: center; margin: 40px 0 30px;">Khuyến Mãi</h1>
+    </div>
+
+    <!-- Main Layout: Sidebar & Products -->
+    <div class="container main-layout">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <button class="top-filter-btn btn-outline-black" style="width: 100%; border-radius: 20px; border: 1px solid black; padding: 10px; background: white; margin-bottom: 20px; font-weight: 600;">Bộ Lọc</button>
+            
+            <div class="filter-card" style="background-color: white; border-radius: 16px; padding: 30px 20px; text-align: center; box-shadow: 0 4px 12px rgba(0,0,0,0.03);">
+                <div class="filter-icon-large" style="margin-bottom: 16px;">
+                    <!-- Dotted funnel icon from Figma -->
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-dasharray="2 2" stroke-linecap="round" stroke-linejoin="round">
+                        <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"></polygon>
+                    </svg>
+                </div>
+                <p style="font-size: 13px; color: var(--text-light); margin-bottom: 24px;">Chưa áp dụng bộ lọc</p>
+                <button class="btn-filter-apply" style="width: 100%; border-radius: 20px; border: none; background-color: #F8F8F8; padding: 12px; font-weight: 600; cursor: pointer;">Bộ Lọc</button>
+            </div>
+        </aside>
+
+        <!-- Products Section -->
+        <section class="products-section">
+            <div class="horizontal-filters" style="display: flex; gap: 12px; margin-bottom: 20px;">
+                <button class="filter-btn active" style="border-radius: 20px; padding: 10px 24px; font-weight: 600; background-color: #1a365d; color: white; border: none;">Gạch Ốp Lát</button>
+                <button class="filter-btn" style="border-radius: 20px; padding: 10px 24px; font-weight: 600; background-color: white; border: 1px solid black; color: black;">Thiết Bị Vệ Sinh</button>
+                <button class="filter-btn" style="border-radius: 20px; padding: 10px 24px; font-weight: 600; background-color: white; border: 1px solid black; color: black;">Thiết Bị Bếp</button>
+            </div>
+            <div class="product-grid" id="product-grid">
+                <!-- Product Cards generated by JS -->
+            </div>
+
+        <div class="pagination">
+            <button class="page-btn"><i class="ph ph-caret-left"></i></button>
+            <button class="page-btn active">1</button>
+            <button class="page-btn">2</button>
+            <button class="page-btn">3</button>
+            <span class="page-dots">...</span>
+            <button class="page-btn">10</button>
+            <button class="page-btn"><i class="ph ph-caret-right"></i></button>
+        </div>
+        </section>
+    </div>
+
+    <!-- Membership Section -->
+    <section class="membership-section">
+        <div class="container membership-container">
+            <div class="membership-header">
+                <h2>Quyền lợi thành viên</h2>
+                <div class="membership-actions">
+                    <button class="btn btn-outline">Đăng ký</button>
+                    <button class="btn btn-primary">Đăng nhập</button>
+                </div>
+            </div>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <img src="assets/images/icon-gift.png" alt="Quà tặng">
+                    </div>
+                    <h3>Quà tặng chào mừng</h3>
+                    <p>Nhận ngay voucher 500k khi đăng ký tài khoản thành viên mới.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <img src="assets/images/icon-support.png" alt="Hỗ trợ">
+                    </div>
+                    <h3>Đổi trả linh hoạt</h3>
+                    <p>Hỗ trợ đổi trả miễn phí trong vòng 7 ngày cho các sản phẩm lỗi.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <img src="assets/images/icon-discount.png" alt="Ưu đãi">
+                    </div>
+                    <h3>Ưu đãi đặc quyền</h3>
+                    <p>Cơ hội mua sắm các sản phẩm giới hạn với giá ưu đãi riêng biệt.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-pattern"></div>
+        <div class="container footer-inner">
+            <div class="footer-col brand-col">
+                <div class="footer-logo">
+                    <img src="assets/images/logo-footer.png" alt="Hùng Quyền Logo" height="40">
+                </div>
+                <div class="social-links">
+                    <a href="#"><img src="assets/images/icon-fb.png" alt="Facebook" height="36"></a>
+                    <a href="#"><img src="assets/images/icon-ig.png" alt="Instagram" height="36"></a>
+                    <a href="#"><img src="assets/images/icon-zalo.png" alt="Zalo" height="36"></a>
+                    <a href="#"><img src="assets/images/icon-yt.png" alt="YouTube" height="36"></a>
+                    <a href="#"><img src="assets/images/icon-tiktok.png" alt="TikTok" height="36"></a>
+                </div>
+            </div>
+            <div class="footer-col links-col">
+                <div class="link-group">
+                    <h3>Về Hùng Quyền</h3>
+                    <ul>
+                        <li><a href="#">Câu chuyện</a></li>
+                        <li><a href="#">Hồ sơ năng lực</a></li>
+                        <li><a href="#">Đối tác</a></li>
+                    </ul>
+                </div>
+                <div class="link-group">
+                    <h3>Thông tin</h3>
+                    <ul>
+                        <li><a href="#">Chính sách bán hàng</a></li>
+                        <li><a href="#">Chính sách bảo hành, sửa chữa</a></li>
+                        <li><a href="#">Chính sách vận chuyển</a></li>
+                        <li><a href="#">Chính sách thanh toán</a></li>
+                    </ul>
+                </div>
+                <div class="link-group">
+                    <h3>Thiết kế dự án của bạn</h3>
+                    <ul>
+                        <li><a href="#">Dự án tham khảo</a></li>
+                        <li><a href="#">Đặt lịch với Hùng Quyền</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-col contact-col">
+                <h3>Thông tin liên hệ</h3>
+                <div class="contact-info">
+                    <p>Công ty TNHH TMDV & SX Hùng Quyền</p>
+                    <p>Địa chỉ: BX104, Vinhomes Ocean Park 2, Nghĩa Trụ, Văn Giang, Hưng Yên (08:00 - 17:00 tất cả các ngày)</p>
+                    <p>Số điện thoại: 0868169669 / 02213910819</p>
+                    <p>Email: nthungquyen@gmail.com</p>
+                </div>
+                <div class="map-placeholder">
+                    <img src="assets/images/map.png" alt="Bản đồ Hùng Quyền">
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom container" style="display: flex; justify-content: flex-start;">
+            <div class="certifications" style="display: flex; gap: 10px;">
+                <img src="assets/images/dmca.png" alt="DMCA Protected" height="30">
+                <img src="assets/images/bocongthuong.png" alt="Đã đăng ký Bộ Công Thương" height="30">
+                <img src="assets/images/bocongthuong-thongbao.png" alt="Đã thông báo Bộ Công Thương" height="30">
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
